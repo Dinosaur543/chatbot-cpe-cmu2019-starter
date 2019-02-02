@@ -10,7 +10,7 @@ const config = {  ////
 
 const client = new Client(config)
 
-app.get('/', function (req, res) {
+app.get('/webhook', function (req, res) {
     res.send('Hello World!!')
 })
 
