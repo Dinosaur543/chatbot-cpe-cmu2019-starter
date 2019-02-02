@@ -10,13 +10,11 @@ const config = {  ////
 
 const client = new Client(config)
 
-app.get('/webhook', function (req, res) {
+app.get('/', function (req, res) {
     res.send('Hello World!!')
 })
 
-
 app.post('/webhook', middleware(config), (req, res) => {
-  
   const event = req.body.events[0];
   
   if (event.type === 'message') {
