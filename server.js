@@ -27,7 +27,7 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
 
     }); */
 
-    client.replyMessage(event.replyToken, 
+   /*  client.replyMessage(event.replyToken, 
       {
         "type": "template",
         "altText": "This is a buttons template",
@@ -66,6 +66,57 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
   }
   res.send('webhook success')//
   
+}) */
+
+client.replyMessage(event.replyToken, {
+  "type": "template",
+  "altText": "this is a carousel template",
+  "template": {
+      "type": "carousel",
+      "columns": [
+          {
+            "thumbnailImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTClp8wAeFFvhoZmVl3i83lpO2SPW1M51zDZY4dRzzr1a0i9VEU4Ahttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTClp8wAeFFvhoZmVl3i83lpO2SPW1M51zDZY4dRzzr1a0i9VEU4A",
+            "imageBackgroundColor": "#FFFFFF",
+            "title": "Nagisa",
+            "text": "Assassination classroom",
+            "actions": [
+                {  
+                    "type":"cameraRoll",
+                    "label":"Camera roll"
+                },
+                {  
+                  "type":"location",
+                  "label":"Location"
+               }
+            ]
+          },
+          {
+            "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/d/d9/Izuku_Midoriya_school_profile.png/revision/latest/scale-to-width-down/145?cb=20190129015623",
+            "imageBackgroundColor": "#FB4B4E",
+            "title": "Midorima",
+            "text": "My Hero academia",
+            "actions": [
+              {
+                "type":"datetimepicker",
+                "label":"Select date",
+                "data":"storeId=12345",
+                "mode":"datetime",
+                "initial":"2017-12-25t00:00",
+                "max":"2018-01-24t23:59",
+                "min":"2017-12-25t00:00"
+              },
+              {  
+                "type":"camera",
+                "label":"Camera"
+             }
+          ]
+          }
+      ],
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover"
+  }
+})
+}
 })
 
 
