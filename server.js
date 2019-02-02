@@ -33,12 +33,12 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+            "thumbnailImageUrl": "https://pngtree.com/freepng/border-robot_1295942/preview-png.html",
             "imageAspectRatio": "rectangle",
             "imageSize": "cover",
-            "imageBackgroundColor": "#FFFFFF",
-            "title": "Menu",
-            "text": "Please select",
+            "imageBackgroundColor": "#FB4B4E",
+            "title": "SAO",
+            "text": "Saowaluk Kaewnok",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
