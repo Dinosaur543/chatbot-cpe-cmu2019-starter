@@ -1,5 +1,6 @@
 const express = require('express')
-const middleware = require('@line/bot-sdk').middleware  /////
+const middleware = require('@line/bot-sdk').middleware
+const Client = require('@line/bot-sdk').Client;
 const app = express()
 
 const config = {  ////
@@ -7,13 +8,30 @@ const config = {  ////
   channelSecret: 'ee001396d779984a00c6499821d79001'
 } ////
 
+const client = new Client(config)
+
 app.get('/', function (req, res) {
     res.send('Hello World!!')
 })
 
+
 app.post('/webhook', middleware(config), (req, res) => {
-  res.send('owowowo')
+  
+  const event = req.body.events[0];
+
+  if (event.type === 'message') {
+    const message = event.message;
+    console.log(message)
+    client.replyMessage(event.replyToken, {
+      type: 'text',
+      text: message.text,//change
+    });
+  }
+  res.send('webhook success')//
+  
 })
+
+
 app.set('port', (process.env.PORT || 4000))
 
 app.listen(app.get('port'), function () {
