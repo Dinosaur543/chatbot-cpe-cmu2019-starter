@@ -33,7 +33,7 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "https://pngtree.com/freepng/border-robot_1295942/preview-png.html",
+            "thumbnailImageUrl": "https://ichef.bbci.co.uk/news/660/cpsprodpb/1999/production/_92935560_robot976.jpg",
             "imageAspectRatio": "rectangle",
             "imageSize": "cover",
             "imageBackgroundColor": "#FB4B4E",
@@ -42,7 +42,7 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
-                "uri": "http://google.com/"
+                "uri": "http://cpe.eng.cmu.ac.th/"
             },
             "actions": [
                 {
@@ -57,8 +57,8 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
                 },
                 {
                   "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://google.com"
+                  "label": "Detail",
+                  "uri": "https://www.facebook.com/souwaluk.keawnok"
                 }
             ]
         }
