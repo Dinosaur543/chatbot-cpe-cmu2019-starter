@@ -41,8 +41,8 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
             "text": "Saowaluk Kaewnok",
             "defaultAction": {
                 "type": "uri",
-                "label": "View detail",
-                "uri": "http://cpe.eng.cmu.ac.th/"
+                "label": "Detail",
+                "uri": "https://www.facebook.com/souwaluk.keawnok"
             },
             "actions": [
                 {
@@ -57,8 +57,8 @@ app.post('/webhook', middleware(config), (req, res) => {  //req = request
                 },
                 {
                   "type": "uri",
-                  "label": "Detail",
-                  "uri": "https://www.facebook.com/souwaluk.keawnok"
+                  "label": "Major",
+                  "uri": "http://cpe.eng.cmu.ac.th/"
                 }
             ]
         }
